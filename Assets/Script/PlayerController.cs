@@ -1,29 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0; 
-    public TextMeshProUGUI CountText;
-    public GameObject winTextObject;
+  
+ private Rigidbody rb; 
 
-    private Rigidbody rb;
-    private int count;
+ 
+ private int count;
 
-private float movementX;
-private float movementY;
+ 
+ private float movementX;
+ private float movementY;
 
-// Start is called before the first frame update
+ 
+ public float speed = 0;
 
+ 
+ public TextMeshProUGUI CountText;
+
+
+ public GameObject WinTextObject;
     void Start()
     {
-        winTextObject.SetActive(false);
+        rb = GetComponent<Rigidbody>();
+        WinTextObject.SetActive(false);
         SetCountText();
         count = 1;
-    rb = GetComponent <Rigidbody>();     
+ 
     }
 
     // Update is called once per frame
@@ -53,7 +61,7 @@ private void OnTriggerEnter(Collider other)
         count = count + 1;
         if (count >= 12)
        {
-           winTextObject.SetActive(true);
+           WinTextObject.SetActive(true);
        }
         
     }
