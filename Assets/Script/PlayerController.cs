@@ -66,6 +66,17 @@ private void OnTriggerEnter(Collider other)
         
     }
     
+    
 }
-
+private void OnCollisionEnter(Collision collision)
+{
+   if (collision.gameObject.CompareTag("Enemy"))
+   {
+       // Destroy the current object
+       Destroy(gameObject); 
+       // Update the winText to display "You Lose!"
+       WinTextObject.gameObject.SetActive(true);
+       WinTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
+   }
+}
 }
