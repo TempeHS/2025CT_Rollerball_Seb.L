@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -94,12 +95,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-private void OnCollisionEnter(Collision collision)
+private void once(Collision collision)
 {
  if (collision.gameObject.CompareTag("Enemy"))
     {
  // Destroy the current object
-        Destroy(player.gameObject); 
+        Destroy(gameObject); 
  
  // Update the winText to display "You Lose!"
         WinTextObject.gameObject.SetActive(true);
@@ -111,3 +112,11 @@ private void OnCollisionEnter(Collision collision)
 
 
 }
+
+
+
+
+
+
+
+
