@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 677120443}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1811,7 +1811,7 @@ GameObject:
   - component: {fileID: 912339741}
   m_Layer: 0
   m_Name: Enemy Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2962,7 +2962,7 @@ GameObject:
   - component: {fileID: 1521541150}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   countText: {fileID: 971508845}
-  winTextObject: {fileID: 1958021072}
+  WinTextObject: {fileID: 1958021072}
 --- !u!1 &1531586011
 GameObject:
   m_ObjectHideFlags: 0

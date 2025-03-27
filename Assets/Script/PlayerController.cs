@@ -94,8 +94,7 @@ public class PlayerController : MonoBehaviour
            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
         }
     }
-
-private void once(Collision collision)
+private void OnCollisionEnter(Collision collision)
 {
  if (collision.gameObject.CompareTag("Enemy"))
     {
@@ -109,8 +108,6 @@ private void once(Collision collision)
     }
 
 }
-
-
 }
 
 
